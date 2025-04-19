@@ -1,0 +1,17 @@
+{
+  "name": "5.7-capstone-project---use-public-api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "Souvik Mitra",
+  "license": "ISC",
+  "description": "This is a capstone project for the course \"Use Public API\". The project is a simple web application that fetches data from a public API and displays it to the user. The project is built using Node.js and Express.",
+  "dependencies": {
+    "axios": "^1.8.4",
+    "ejs": "^3.1.10",
+    "express": "^5.1.0"
+  }
+}

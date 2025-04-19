@@ -1,0 +1,106 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #222;
+}
+
+.wrapper {
+    --max-width: 1200px;
+    --padding-inline: 1.5rem;
+
+    width: min(var(--max-width), 100% - 2 * var(--padding-inline));
+    margin-inline: auto;
+    padding: 7rem 0 3rem 0;
+}
+
+.page-title {
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0.5rem 0;
+    color: #007bff;
+}
+
+form {
+    margin-inline: auto;
+    max-width: fit-content;
+}
+
+input {
+    padding: 0.5rem;
+    margin: 0.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid #ccc;
+}
+
+button {
+    padding: 0.5rem 1rem;
+    margin: 0.5rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+h2 {
+    margin-bottom: .5rem;
+    font-size: 2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.cocktail {
+    display: flex;
+    align-items: stretch;
+    gap: 2rem;
+    margin-block: 1rem;
+    background-color: #fff;
+    color: #333;
+    min-height: 500px;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.cocktail__content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1.5rem;
+}
+
+.cocktail__recipe {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    width: 100%;
+    height: 100%;
+}
+
+.cocktail__ingredient {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    list-style: none;
+}
+
+.cocktail__image {
+    min-height: 500px;
+    max-width: 500px;
+    object-fit: cover;
+}
+
+.no-result {
+    font-size: 2rem;
+    text-align: center;
+    opacity: 0.5;
+}

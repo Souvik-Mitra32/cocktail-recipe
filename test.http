@@ -1,0 +1,15 @@
+// The cocktail DB API
+@API = www.thecocktaildb.com/api/json/v1/1
+
+
+GET http://localhost:3000/ HTTP/1.1
+
+###
+
+// Get a random cocktail
+GET {{API}}/random.php HTTP/1.1
+
+###
+
+// Get a cocktail by name
+GET {{API}}/search.php?s=lagoon HTTP/1.1

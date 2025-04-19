@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cocktail Recipe</title>
+
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/utility.css">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+
+    <main>
+
+        <div class="wrapper">
+
+            <div>
+                <div class="page-title">Cocktails</div>
+                <form action="/cocktail-search" method="GET">
+                    <input type="text" name="cocktail" placeholder="Enter cocktail name..." required>
+                    <button type="submit">Search</button>
+                </form>
+            </div>
+
+            <% if(cocktail) { %>
+                <% cocktail.drinks.forEach((drink)=> { %>
+
+                    <div class="cocktail">
+
+                        <div class="cocktail__content">
+
+                            <h1 class="cocktail__title">
+                                <%=drink.strDrink %>
+                            </h1>
+                            <div class="cocktail__recipe">
+
+                                <div>
+                                    <h2>Ingredients</h2>
+                                    <ul class="cocktail__ingredient">
+                                        <% for (i=1; i<=15; i++) { %>
+                                            <% if (drink[`strIngredient${i}`] !==null) { %>
+                                                <li>
+                                                    <%= drink[`strMeasure${i}`] %>
+                                                        <%= drink[`strIngredient${i}`] %>
+                                                </li>
+                                                <%} %>
+                                                    <% }%>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h2>Instructions</h2>
+                                    <p class="cocktail__instruction">
+                                        <%= drink.strInstructions %>
+                                    </p>
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <img src="<%= drink.strDrinkThumb %>" alt="Margaritta" class="cocktail__image">
+
+                    </div>
+                    <% }) %>
+                        <% } else { %>
+                            <div class="no-result">No result found.</div>
+                            <% } %>
+        </div>
+
+    </main>
+
+</body>
+
+</html>
